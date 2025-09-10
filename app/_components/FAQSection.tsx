@@ -61,7 +61,7 @@ export const FAQSection = () => {
                 
                 <Image width={32} height={32} src='/svg/arrow.svg' alt=""/>
               </summary>
-              <p className="mt-[16px] text-[16px] text-[#737373]">{f.answer}</p>
+              <p className="text-[16px] text-[#737373]">{f.answer}</p>
             </details>
           ))}
         </div>

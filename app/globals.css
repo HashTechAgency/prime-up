@@ -10,6 +10,7 @@
 
 
   --font-s-title : 52px;
+  interpolate-size: allow-keywords;
 }
 
 input {
@@ -127,12 +128,29 @@ ul.advantages > li:first-child{
   }
 }
 
+details{
+  overflow: hidden;
+}
+
 details::-webkit-details-marker {
     display: none;
 }
 
+details::details-content {
+  block-size:  0;
+  transition: block-size .5s, content-visibility .5s allow-discrete;
+}
+
+details:open::details-content {
+  block-size: auto;
+}
+
 details:open img{
   transform: rotate(180deg);
+}
+
+details > p {
+  padding-block: 1rem;
 }
 
 summary::marker {

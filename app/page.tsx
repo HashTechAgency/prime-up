@@ -9,9 +9,9 @@ export default function Home() {
       </div>
       <ServicesSection/>
       <Gallery/>
-      <PorsfessionalSection/>
       <GuaranteeSection/>
       <WorksStepSection/>
+      <PorsfessionalSection/>
       <FAQSection/>
       <CallSection/>
       <Footer/>

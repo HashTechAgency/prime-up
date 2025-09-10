@@ -74,7 +74,7 @@ export const Main = () => {
     
  
     return (
-        <main ref={mainRef} className="relative overflow-hidden px-[16px] pb-[61px] flex gap-[49px]">
+        <main id="home" ref={mainRef} className="relative overflow-hidden px-[16px] pb-[61px] flex gap-[49px]">
             <div className="max-lg:hidden max-2xl:w-[300px] max-2xl:h-[700px] rounded-[24px] overflow-hidden left_img h-[836px]">
                 <Image className="w-full h-full object-cover" width={412} height={836} src={'/img/main-1.png'} alt=""/>
                 <div className="overlay"/>

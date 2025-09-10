@@ -12,9 +12,10 @@ export const Footer = () => {
     ]
 
     const socials = [
-        "/svg/instagram.svg",
-        "/svg/facebook.svg",
-        "/svg/mail.svg",
+      {src : "/svg/instagram.svg", href : "https://www.instagram.com/llcprimeup?utm_source=qr&igsh=cXBnN3Y4eXgzazN6"},
+      {src : "/svg/facebook.svg", href : "https://www.facebook.com/share/1Xnrt1HqZM/"},
+      {src : "/svg/mail.svg", href : "mailto:llcprimeup@gmail.com"},
+      {src : "/svg/whatsapp.svg", href : "https://wa.me/message/FEDFRB6DTVC3J1"},
     ]
 
   return (
@@ -58,8 +59,8 @@ export const Footer = () => {
 
                 <div className="flex gap-[24px]">
                     {socials.map((social, i) => (
-                    <Link key={i} href={'/'} className="transition hover:scale-120">
-                        <Image  width={24} height={24} src={social} alt=""/>
+                    <Link key={i} href={social.href} className="transition hover:scale-120">
+                        <Image  width={24} height={24} src={social.src} alt=""/>
                     </Link>
                     ))}
                 </div>
