@@ -78,7 +78,7 @@ export const Header = () => {
             </nav>
 
             <span className="max-lg:hidden font-bold text-white flex items-center gap-[10px]">
-                <div className="rounded-full w-[12px] h-[12px] bg-[#FF5E5E]"/>
+                <div className="rounded-full w-[12px] h-[12px] bg-[#5eff5e]"/>
                 24 Hour Services
             </span>
 
@@ -118,7 +118,7 @@ const MenuBar = forwardRef<HTMLDivElement, {close : () => void}>(({close},ref) =
             </nav>
 
             <span className="mx-auto mt-auto font-bold text-white flex items-center gap-[10px]">
-                <div className="rounded-full w-[12px] h-[12px] bg-[#FF5E5E]"/>
+                <div className="rounded-full w-[12px] h-[12px] bg-[#5eff5e]"/>
                 24 Hour Services
             </span>
         </div>  

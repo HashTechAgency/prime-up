@@ -6,38 +6,42 @@ import Image from "next/image"
 
 const services = [
     {
-        title : "Plumbing services", 
-        text : "Drain pipe leaking, pipe clogged, replace the pipe line", 
+        title : "Appliance Repair", 
+        text : `Repair & installation of
+        washers, dryers, dishwashers, microwaves, ovens, refrigerators
+        `, 
         img : "service-1.svg"
     },
     {
-        title : "Roofing repair", 
-        text : "Roof leaks, tile replacement, roof cleaning and maintenance", 
+        title : "Handyman Services", 
+        text : "Furniture assembly, TV mounting, shelves, curtain rods, small home fixes", 
         img : "service-2.svg"
     },
     {
-        title : "Tree Trimming", 
-        text : "Trimming and cleaning, Deadwood removal, Tree shaping",
+        title : "House Painting", 
+        text : "Full house painting or partial projects (siding, trims, doors, garages)",
         img : "service-3.svg"
     },
     {
-        title : "Appliance Repair", 
-        text : "Repair of washing machines, refrigerators, Air conditioner, etc", 
+        title : "Drywall & Patching", 
+        text : `Repair of holes, cracks,
+dents, and texture finishing`, 
         img : "service-4.svg"
     },
     {
-        title : "Bathroom Remodeling", 
-        text : "Design and Consulting, installation, Repairing, tile repair", 
+        title : "Flooring & Carpentry", 
+        text : `Laminate, vinyl, baseboards, small woodwork, deck
+        and patio fixes`, 
         img : "service-5.svg"
     },
     {
-        title : "Locksmith", 
-        text : "Lock Installation and Repair, Duplication, Lock Rekeying", 
+        title : "Deck & Siding Replacement", 
+        text : "Replacement Professional repair and replacement of deck boards", 
         img : "service-6.svg"
     }, 
     {
-        title : "Mold Removal", 
-        text : "Removing and cleaning mildew, Restoration and Prevention", 
+        title : "Bathroom & Kitchen Upgrades", 
+        text : "Faucet replacement, light fixtures, vanities, shower base replacement", 
         img : "service-7.svg"
     },
 ]
@@ -47,8 +51,8 @@ export const ServicesSection = () => {
         gsap.from('#services .service_box', {
             scrollTrigger : {
                 trigger: '#services .service_box',       
-                start: "top 95%",     
-                end: "bottom 30%",   
+                start: "top 100%",     
+                end: "bottom 25%",   
                 toggleActions: "play none none reverse", 
                 scrub: 0.5,         
                 markers: false,      
@@ -92,7 +96,7 @@ export const ServicesSection = () => {
                                 <Image width={40} height={40} src={`/svg/${s.img}`} alt=""/>
                             </div>
 
-                            <h3 className="text-center lg:text-start text-(--black) text-[20px] 2xl:text-[24px] font-bold mt-[16px]">{s.title}</h3>
+                            <h3 className="max-w-[300px] text-center max-lg:mx-auto lg:text-start text-(--black) text-[20px] 2xl:text-[24px] font-bold mt-[16px]">{s.title}</h3>
                             <p className="max-lg:mx-auto max-lg:text-center text-[#545971] text-[18px] max-w-[296px] mt-[12px]">{s.text}</p>
                         </div>
                     ))}

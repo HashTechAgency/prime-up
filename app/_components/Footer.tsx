@@ -12,10 +12,8 @@ export const Footer = () => {
     ]
 
     const socials = [
-        "/svg/youtube.svg",
         "/svg/instagram.svg",
         "/svg/facebook.svg",
-        "/svg/twitter.svg",
         "/svg/mail.svg",
     ]
 
@@ -45,7 +43,7 @@ export const Footer = () => {
 
           <div className="mt-[30px] sm:mt-[54px] flex flex-wrap gap-[32px] sm:gap-[98px]">
             <div>
-                <h5 className="text-white font-bold text-[32px]">LOGO</h5>
+                <Image width="230" height="32" src='/svg/logo.svg' alt="Logo"/>
                 <p className="max-w-[460px] mt-[32px] text-white text-[18px]">
                     “Prime Up LLC”  is your premier destination for top-notch smart home service and repair. 
                 </p>
@@ -73,9 +71,7 @@ export const Footer = () => {
 
      <p className="flex items-center justify-center gap-3 text-[18px] text-white">
         <span>©{currentYear} </span>
-        <Link href={'https://hashtech.kg/'}>
-            <Image width={120} height={50} src="/svg/hashdev.svg" alt=""/>
-        </Link>
+        Prime-Up LLC
         <span>. All rights reserved</span>
      </p>
     </footer>
