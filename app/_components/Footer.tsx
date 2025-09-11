@@ -5,10 +5,10 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
     const links = [
         {title : 'home', href : '#home'},
-        {title : 'About Us', href : '#about'},
-        {title : 'Services', href : '#servies'},
+        {title : 'Services', href : '#services'},
+        {title : 'Protfolio', href : '#partfolio'},
         {title : 'Why choose us', href : '#why-choose-us'},
-        {title : 'Contact', href : '#contact'},
+        {title : 'FAQ', href : '#faq'},
     ]
 
     const socials = [

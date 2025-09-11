@@ -40,7 +40,7 @@ export const PorsfessionalSection = () => {
     });
 
     return (
-        <section id="about">
+        <section id="why-choose-us">
             <div className="wrapper max-sm:flex-wrap-reverse max-sm:justify-center flex items-center justify-between gap-[32px] 2xl:gap-[20px] mt-[30px] 2xl:mt-[60px] lg:pt-[100px] 2xl:pt-[168px]  pb-[32px] sm:pb-[64px]">
                 
                 <div className="max-w-[561px]">

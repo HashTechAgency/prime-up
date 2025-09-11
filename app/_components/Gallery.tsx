@@ -33,7 +33,7 @@ export const Gallery = () => {
 
 
   return (
-    <section id="gallery" className="max-lg-[40px] py-[100px]">
+    <section id="partfolio" className="max-lg-[40px] py-[100px]">
       <div className="wrapper">
         <h2 className="s-title text-center">Our Portfolio</h2>
         <p className="s-text mt-[24px] text-center max-w-[552px] mx-auto">

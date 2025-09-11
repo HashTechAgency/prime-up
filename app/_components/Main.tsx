@@ -26,6 +26,11 @@ export const Main = () => {
             }
         })
         .to('h1', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0})
+        .from('#home .logo', {
+            opacity : 0,
+            duration : 1,
+            y : "40px",
+        }, "=-2")
         .from('.left_img', {
             clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)'
         }, "=-2")
@@ -79,7 +84,11 @@ export const Main = () => {
                 <Image className="w-full h-full object-cover" width={412} height={836} src={'/img/main-1.png'} alt=""/>
                 <div className="overlay"/>
             </div>
-            <div className="grow-1 text-center pt-[24px] sm:pt-[138px] 2xl:pt-[162px]">
+            <div className="grow-1 text-center pt-[24px] sm:pt-[48px] 2xl:pt-[62px]">
+                <div className="logo flex flex-col items-center mb-[32px]">
+                    <Image width="200" height="32" src='/svg/logo.svg' alt="Logo"/>
+                    <h3 className="text-white text-[20px]">Lic. # PRIMEUL753MB</h3>
+                </div>
 
                 <ul className="services_list mb-[24px] text-center ">
                     {["Maintenances","Repairs","Improvements"].map((s,i) => (

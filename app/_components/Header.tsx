@@ -6,10 +6,10 @@ import gsap from "gsap"
 
 
 const links = [
-    {title : 'About Us', href : '#about'},
-    {title : 'Services', href : '#servies'},
+    {title : 'Services', href : '#services'},
+    {title : 'Protfolio', href : '#partfolio'},
     {title : 'Why choose us', href : '#why-choose-us'},
-    {title : 'Contact', href : '#contact'},
+    {title : 'FAQ', href : '#faq'},
 ]
 
 export const Header = () => {
@@ -70,7 +70,10 @@ export const Header = () => {
     return (
         <>
         <header className="responsive flex items-center justify-between p-[12px_24px] lg:p-[24px_80px] 2xl:p-[24px_160px] ">
-            <Image width="149" height="32" src='/svg/logo.svg' alt="Logo"/>
+            <span className="max-lg:hidden font-bold text-white flex items-center gap-[10px]">
+                <Image width={25} height={25} src="/img/guarantee-icon.png" alt=""/>
+                100% recomended
+            </span>
             <nav className="max-lg:hidden flex items-center gap-[57px]">
                 {links.map((link,i) => (
                     <Link key={i} className="text-white text-[16px] 2xl:text-[18px] font-bold" href={link.href}>{link.title}</Link>
