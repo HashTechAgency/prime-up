@@ -1,4 +1,5 @@
-import { Footer, Header, Main,PorsfessionalSection,ServicesSection,GuaranteeSection, WorksStepSection, CallSection, FAQSection, Gallery} from "./_components";
+import { Footer, Header, Main,PorsfessionalSection,ServicesSection,GuaranteeSection, WorksStepSection, CallSection, FAQSection} from "./_components";
+import TestimonialsSection from "./_components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -8,11 +9,11 @@ export default function Home() {
          <Main/>
       </div>
       <ServicesSection/>
-      <Gallery/>
       <GuaranteeSection/>
       <WorksStepSection/>
       <PorsfessionalSection/>
       <FAQSection/>
+      <TestimonialsSection/>
       <CallSection/>
       <Footer/>
     </div>

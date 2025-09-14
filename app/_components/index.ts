@@ -7,4 +7,4 @@ export * from './GuaranteeSection'
 export * from './WorkStepSection';
 export * from './CallSection';
 export * from './FAQSection';
-export * from './Gallery';
+export * from './TestimonialsSection';

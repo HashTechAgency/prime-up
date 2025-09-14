@@ -2,6 +2,7 @@
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import Image from "next/image"
+import Link from 'next/link'
 
 
 const services = [
@@ -109,9 +110,9 @@ export const ServicesSection = () => {
                             You can tell us what you need and we can help! 
                         </p>
 
-                        <button className="p-button !bg-white !text-(--blue) w-full mt-[32px]">
+                        <Link href={'tel:+12066122158'} className="p-button !bg-white !text-(--blue) w-full mt-[32px]">
                             Call Us Now
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

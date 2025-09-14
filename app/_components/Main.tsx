@@ -86,8 +86,8 @@ export const Main = () => {
             </div>
             <div className="grow-1 text-center pt-[24px] sm:pt-[48px] 2xl:pt-[62px]">
                 <div className="logo flex flex-col items-center mb-[32px]">
-                    <Image width="200" height="32" src='/svg/logo.svg' alt="Logo"/>
-                    <h3 className="text-white text-[20px]">Lic. # PRIMEUL753MB</h3>
+                    <Image width="250" height="32" src='/svg/logo.svg' alt="Logo"/>
+                    <h3 className="text-white text-[18px]">Lic. # PRIMEUL753MB</h3>
                 </div>
 
                 <ul className="services_list mb-[24px] text-center ">
