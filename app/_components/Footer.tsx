@@ -6,7 +6,7 @@ export const Footer = () => {
     const links = [
         {title : 'home', href : '#home'},
         {title : 'Services', href : '#services'},
-        {title : 'Protfolio', href : '#partfolio'},
+        {title : 'Testimonials', href : '#testimonials'},
         {title : 'Why choose us', href : '#why-choose-us'},
         {title : 'FAQ', href : '#faq'},
     ]
