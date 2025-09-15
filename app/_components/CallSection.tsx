@@ -23,8 +23,7 @@ export const CallSection = () => {
             <Image className="absolute top-0 left-0" width={581} height={45} src={'/img/call-bg-el-1.png'} alt=""/>
         </div>  
         
-        <Image className="w-full sm:hidden" width={374} height={323} src={'/img/call-worker2.png'} alt=""/>
-        <Image className="max-2xl:w-[766px] max-sm:hidden absolute right-0 bottom-0 " width={966} height={655} src={'/img/call-worker.png'} alt=""/>
+        <Image className="max-2xl:w-[766px] sm:absolute right-0 bottom-0 " width={966} height={655} src={'/img/call-worker.png'} alt=""/>
     </section>
     )
 }       

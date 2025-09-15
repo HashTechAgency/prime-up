@@ -45,6 +45,11 @@ dents, and texture finishing`,
         text : "Faucet replacement, light fixtures, vanities, shower base replacement", 
         img : "service-7.svg"
     },
+    {
+        title : "Holiday Lighting", 
+        text : "Installation of holiday string lights and decore for Halloween and New Year", 
+        img : "halloween.svg"
+    },
 ]
 
 export const ServicesSection = () => {
@@ -102,7 +107,7 @@ export const ServicesSection = () => {
                         </div>
                     ))}
 
-                    <div className="service_box flex-[1_1_300px] 2xl:flex-[1_1_360px] p-[32px] rounded-[24px] bg-(--blue)" >
+                    {/* <div className="service_box flex-[1_1_300px] 2xl:flex-[1_1_360px] p-[32px] rounded-[24px] bg-(--blue)" >
                         <h3 className="text-center text-white text-[20px] 2xl:text-[24px] font-bold">
                             More service?
                         </h3>
@@ -113,7 +118,7 @@ export const ServicesSection = () => {
                         <Link href={'tel:+12066122158'} className="p-button !bg-white !text-(--blue) w-full mt-[32px]">
                             Call Us Now
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
