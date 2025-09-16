@@ -128,33 +128,37 @@ ul.advantages > li:first-child{
   }
 }
 
-details{
+.faq_box {
   overflow: hidden;
 }
 
-details::-webkit-details-marker {
-    display: none;
+.faq_box > p {
+  max-height: 0;
+  overflow: hidden;
+  content-visibility: hidden;
+  transition: max-height 1s;
 }
 
-details::details-content {
-  block-size:  0;
-  transition: block-size .5s, content-visibility .5s allow-discrete;
+.faq_box.active > p {
+  max-height: 500px;
+  content-visibility: visible;
 }
 
-details:open::details-content {
-  block-size: auto;
-}
-
-details:open img{
+.faq_box.active img {
   transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
-details > p {
-  padding-block: 1rem;
-}
-
-summary::marker {
-    content: '';
+@supports (transition: content-visibility allow-discrete) {
+  .faq_box p {
+    transition: max-height 0.5s ease, content-visibility 0.5s allow-discrete;
+  }
+  
+  @starting-style {
+    .faq_box.active {
+      content-visibility: hidden;
+    }
+  }
 }
 
 

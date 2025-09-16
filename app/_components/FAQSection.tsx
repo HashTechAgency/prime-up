@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const faq = [
   {
@@ -54,18 +55,25 @@ export const FAQSection = () => {
         </div>
 
         <div className="faq_container grow-1 flex flex-col gap-y-[12px]">
-          {faq.map((f, i) => (
-            <details className="faq_box transition hover:bg-[#F3F5F9] open:bg-[#F3F5F9] p-[24px_32px] rounded-[12px]" key={i}>
-              <summary className="select-none flex gap-[12px] justify-between text-[18px] sm:text-[24px] text-[#545971] font-bold cursor-pointer">
-                {f.question}
-                
-                <Image width={32} height={32} src='/svg/arrow.svg' alt=""/>
-              </summary>
-              <p className="text-[16px] text-[#737373]">{f.answer}</p>
-            </details>
-          ))}
+          {faq.map((f, i) => <FAQ key={i} item={f}/>)}
         </div>
       </div>
     </section>
   );
 };
+
+
+
+const FAQ = ({item}:{item: {question:string, answer : string}}) => {
+  const [active,setActive] = useState(false);
+  return (
+     <div className={`faq_box ${active ? 'active' : ''} hover:bg-[#F3F5F9] open:bg-[#F3F5F9] p-[24px_32px] rounded-[12px]`}>
+        <div onClick={() => setActive(prev => !prev)} className="select-none flex gap-[12px] justify-between text-[18px] sm:text-[24px] text-[#545971] font-bold cursor-pointer">
+          {item.question}
+          
+          <Image width={32} height={32} src='/svg/arrow.svg' alt=""/>
+        </div>
+        <p className="text-[16px] text-[#737373]">{item.answer}</p>
+      </div>
+  )
+}
