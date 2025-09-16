@@ -144,6 +144,10 @@ ul.advantages > li:first-child{
   content-visibility: visible;
 }
 
+.faq_box.active{
+  background: #F3F5F9;
+}
+
 .faq_box.active img {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
