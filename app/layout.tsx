@@ -3,6 +3,7 @@ import {Plus_Jakarta_Sans } from "next/font/google";
 import LenisScrollProvider from "./_provider/LenisProvider";
 import "./globals.css";
 import { GoogleTag } from "@/components/GoogleTag";
+import { MetaPixel } from "@/components/MetaPixel";
 
 const jakartatSans = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <GoogleTag />
+        <MetaPixel/>
       </head>
       <body
         className={`${jakartatSans.variable} antialiased`}
