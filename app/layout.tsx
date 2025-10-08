@@ -4,6 +4,7 @@ import LenisScrollProvider from "./_provider/LenisProvider";
 import "./globals.css";
 import { GoogleTag } from "@/components/GoogleTag";
 import { MetaPixel } from "@/components/MetaPixel";
+import { YandexMetrika } from "@/components/YandexMetrika";
 
 const jakartatSans = Plus_Jakarta_Sans({
   variable: "--font-geist-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({
       <head>
         <GoogleTag />
         <MetaPixel/>
+        <YandexMetrika/>
       </head>
       <body
         className={`${jakartatSans.variable} antialiased`}
