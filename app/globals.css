@@ -57,13 +57,16 @@ main .services_list > li {
   color: var(--blue);
 }
 
-#about ul > li::before{
+#about ul > li::before,
+#why-choose-us ul > li::before
+{
   content: url('../public/svg/checkbox-2.svg');
   margin-right: 12px;
   display: block;
 }
 
-#about ul > li{
+#about ul > li,
+#why-choose-us ul > li{
   font-size: 20px;
   color : var(--dark-blue);
   font-weight: 700;
@@ -71,6 +74,7 @@ main .services_list > li {
   display: flex;
   align-items: center;
 }
+
 
 main h1{
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);

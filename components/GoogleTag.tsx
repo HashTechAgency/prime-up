@@ -25,14 +25,15 @@ export function GoogleTag() {
           `,
         }}
       />
-      <Script
+        <Script
+        id="google-conversion"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            gtag('event', 'conversion', {'send_to': ${GA_MEASUREMENT_ID}/FJimCLLNpqkbENug6dFB'});
+            gtag('event', 'conversion', {'send_to': '${GA_MEASUREMENT_ID}/FJimCLLNpqkbENug6dFB'});
           `,
         }}
       />
-
       <Script
         id="gtm-script"
         strategy="afterInteractive"
