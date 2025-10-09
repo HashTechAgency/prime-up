@@ -3,8 +3,8 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GTM_ID = "GTM-PFC9GNDT";
 
 export function GoogleTag() {
-  if(!GA_MEASUREMENT_ID){
-    return null
+  if (!GA_MEASUREMENT_ID) {
+    return null;
   }
 
   return (
@@ -25,12 +25,24 @@ export function GoogleTag() {
           `,
         }}
       />
-        <Script
+      {/* <!-- Event snippet for Contact (1) conversion page --> */}
+      <Script
         id="google-conversion"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            gtag('event', 'conversion', {'send_to': '${GA_MEASUREMENT_ID}/FJimCLLNpqkbENug6dFB'});
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', { 
+                  'send_to': 'AW-17619898459/y8_JCJys9KkbENug6dFB',
+                  'event_callback': callback
+              });
+              return false;
+            }
           `,
         }}
       />
@@ -48,12 +60,12 @@ export function GoogleTag() {
         }}
       />
 
-       <noscript>
+      <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
           height="0"
           width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
+          style={{ display: "none", visibility: "hidden" }}
         />
       </noscript>
     </>
