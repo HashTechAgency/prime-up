@@ -1,3 +1,5 @@
+import { StarIcon } from "./icons/star";
+
 const testimonials = [
   {
     title: "Plumbing help",
@@ -88,27 +90,26 @@ const testimonials = [
   },
 ];
 
+const newTestimonials = [
+  "Great work and excellent communication. Would definitely hire again.",
+  "Came prepared, worked efficiently,and paid great attention to detail. Even suggested improvements beyond the scope.",
+  "Amazing work and very flexible with scheduling, Highly recommended.",
+];
+
 const TestimonialsSection = () => {
   return (
     <section id="testimonials">
       <div className="wrapper pt-[108px] pb-[32px] sm:pb-[120px]">
-        <span className="uppercase text-[16px] font-bold">
-          thousands trust prime-up
-        </span>
-        <h2 className="s-title my-[25px]">
-          Don't take our word for it,
-          <br /> see what our clients say
+        <h2 className="s-title my-[25px] text-center">
+          Trusted by Washington Homeowners
         </h2>
-        <p className="s-text max-w-[612px] mb-[80px]">
-          We are honored by your feedback, and it fuels our commitment to
-          delivering exceptional handyman services. Read the reviews to hear
-          firsthand how Prime-Up is making a positive impact on people's lives.
-          Your trust is our greatest achievement.
+        <p className="text-[18px] sm:text-[20px] text-(--dark-blue) mb-[40px] text-center mx-auto">
+          Built on quality workmanship, clear communication, and accountability.
         </p>
 
         <div className="scroller">
-          <div className="scroller__inner overflow-auto flex gap-[20px]">
-            {[...testimonials,...testimonials].map((t, i) => (
+          <div className="flex flex-wrap justify-center gap-[20px]">
+            {/* {[...testimonials,...testimonials].map((t, i) => (
               <div
                 key={i}
                 className="flex flex-col bg-[#ebedec] p-[25px_30px] basis-[300px] sm:basis-[550px] shrink-0"
@@ -138,6 +139,31 @@ const TestimonialsSection = () => {
                     {t.text}
                   </p>
                 </div>
+              </div>
+            ))} */}
+
+            {newTestimonials.map((t, i) => (
+              <div
+                className="h-fit bg-white text-center basis-[320px] shadow p-[20px] flex flex-wrap flex-col items-center"
+                key={i}
+              >
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star: number) => (
+                    <StarIcon
+                      className="text-[#e3b960]"
+                      key={star}
+                      width={25}
+                      height={26}
+                    />
+                  ))}
+                </div>
+                <p className="mt-[10px] text-[16px] sm:text-[20px] text-(--dark-blue) before:content-[url('/svg/quote-left.svg')] before:inline before:align-super after:content-[url('/svg/quote-right.svg')]">
+                  {t}
+                </p>
+
+                <span className="text-(--grey) text-[14px] mt-[12px]">
+                  - Homeowner, WA
+                </span>
               </div>
             ))}
           </div>

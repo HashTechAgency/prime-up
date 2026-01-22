@@ -115,9 +115,9 @@ export const GuaranteeSection = () => {
                         </div>
                     </div>
 
-                    <hr style={{
+                    {/* <hr style={{
                         borderImage : "linear-gradient(270deg, rgba(78, 101, 182, 0) -8.63%, #4E65B6 50.54%, rgba(78, 101, 182, 0) 104.98%) 1;"
-                    }} className="my-[52px] sm:my-[60px] mx-auto"/>
+                    }} className="my-[52px] sm:my-[60px] mx-auto"/> */}
 
 
                     <div className="flex gap-[20px] max-sm:gap-y-[52px] gap-y-[60px] flex-wrap">

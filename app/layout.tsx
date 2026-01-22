@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import {Plus_Jakarta_Sans } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import LenisScrollProvider from "./_provider/LenisProvider";
 import "./globals.css";
 import { GoogleTag } from "@/components/GoogleTag";
 import { MetaPixel } from "@/components/MetaPixel";
 import { YandexMetrika } from "@/components/YandexMetrika";
 
-const jakartatSans = Plus_Jakarta_Sans({
-  variable: "--font-geist-sans",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
         <YandexMetrika/>
       </head>
       <body
-        className={`${jakartatSans.variable} antialiased`}
+        className={`${nunitoSans.variable} antialiased`}
       >
         <LenisScrollProvider>
           {children}

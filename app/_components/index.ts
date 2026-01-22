@@ -8,3 +8,5 @@ export * from './WorkStepSection';
 export * from './CallSection';
 export * from './FAQSection';
 export * from './TestimonialsSection';
+export * from './HowItWorks';
+export * from './ReadyStart';

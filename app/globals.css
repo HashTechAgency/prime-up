@@ -3,19 +3,29 @@
 
 :root {
   --black : #171921;
-  --blue : #15B2F5;
+  --blue : #6398ce;
   --dark-blue : #0D213A;
   --grey : #9EA3B5;
   --grey-2 : #545971;
+  --grey-800: #ebedec;
 
 
-  --font-s-title : 52px;
+  --font-s-title : 40px;
   interpolate-size: allow-keywords;
+}
+
+body {
+  font-family:  var(--font-nunito-sans);
+  background: #f2f1fa;
 }
 
 input {
   outline: 0;
   border:  0;
+}
+
+ul::marker{
+  display: contents;
 }
 
 main .services_list > li:before{
@@ -198,7 +208,7 @@ main .right_img .overlay{
 
 .wrapper { 
   padding-inline: 38px;
-  max-width: 1538px;
+  max-width: 1240px;
   margin-inline: auto;
 }
 
@@ -210,13 +220,19 @@ main .right_img .overlay{
   font-size: 18px;
   font-weight: 700;
   justify-content: center;
+  align-items: center;
   display: flex;
   border-radius: 60px;
   cursor: pointer;
 }
 
+.p-button.secondary {
+  background: white;
+  color: var(--dark-blue);
+}
+
 .s-title  {
-  color : var(--black);
+  color : var(--dark-blue);
   font-weight : 700;
   font-size : var(--font-s-title);
   line-height: 64px;
@@ -231,7 +247,7 @@ main .right_img .overlay{
 
 @media (width <= 1440px) {
   :root{
-    --font-s-title :42px;
+    --font-s-title :32px;
   }
 
   .s-title  {
@@ -240,7 +256,7 @@ main .right_img .overlay{
 
   .p-button {
     font-size: 16px;
-    padding: 12px 34px;
+    padding: 8px 32px;
   }
 }
 
@@ -377,3 +393,5 @@ main .right_img .overlay{
     transform: translate(calc(-50% - 0.5rem));
   }
 } */
+
+
