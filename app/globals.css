@@ -256,7 +256,7 @@ main .right_img .overlay{
 
   .p-button {
     font-size: 16px;
-    padding: 8px 32px;
+    padding: 12px 34px;
   }
 }
 
@@ -271,6 +271,10 @@ main .right_img .overlay{
 
   .wrapper { 
     padding-inline: 24px;
+  }
+
+   .p-button {
+    padding: 8px 32px;
   }
 }
 
