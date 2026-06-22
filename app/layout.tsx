@@ -1,19 +1,29 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 import LenisScrollProvider from "./_provider/LenisProvider";
 import "./globals.css";
 import { GoogleTag } from "@/components/GoogleTag";
 import { MetaPixel } from "@/components/MetaPixel";
 import { YandexMetrika } from "@/components/YandexMetrika";
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Prime Up LLC",
-  description: "You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!",
+  title: "Prime Up — Licensed WA General Contractor",
+  description:
+    "Prime Up General Construction — transforming Washington homes with precision craftsmanship. Custom decks, siding & general improvements. Licensed, bonded & insured.",
 };
 
 export default function RootLayout({
@@ -29,7 +39,7 @@ export default function RootLayout({
         <YandexMetrika/>
       </head>
       <body
-        className={`${nunitoSans.variable} antialiased`}
+        className={`${manrope.variable} ${cormorant.variable} antialiased`}
       >
         <LenisScrollProvider>
           {children}

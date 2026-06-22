@@ -1,172 +1,103 @@
-import { StarIcon } from "./icons/star";
+const MEDALLION_1 = `
+<svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="1">
+  <circle cx="48" cy="48" r="44" fill="rgba(212,184,120,0.18)"></circle>
+  <circle cx="48" cy="48" r="38"></circle>
+  <circle cx="48" cy="48" r="34" opacity="0.4"></circle>
+  <path d="M48 16 L52 26 L62 27 L54 34 L56 44 L48 39 L40 44 L42 34 L34 27 L44 26 Z" fill="currentColor" opacity="0.4"></path>
+  <text x="48" y="54" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" font-weight="700" fill="#d4b878" letter-spacing="1">PRIME UP</text>
+  <text x="48" y="62" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" font-weight="600" fill="#d4b878">MASTER</text>
+  <text x="48" y="69" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" font-weight="600" fill="#d4b878">CRAFTSMEN</text>
+  <path d="M48 76 l1 3 3 0.3 -2.3 2 0.6 3 -2.3-1.5 -2.3 1.5 0.6-3 -2.3-2 3-0.3z" fill="currentColor"></path>
+</svg>`;
 
-const testimonials = [
-  {
-    title: "Plumbing help",
-    text: "Amazing work and I was super impressed with his flexibility in working around my work schedule and availability! Can't recommend enough.",
-    date: "Jul 28, 2025",
-  },
-  {
-    title: "Application Installation & Repairs",
-    text: "Great job and work",
-    date: "Mar 27, 2025",
-  },
-  {
-    title: "Furniture Assembly",
-    text: "I've hired Cholponbek a few times, he always does an excellent job and is very friendly",
-    date: "Apr 9, 2025",
-  },
-  {
-    title: "Appliance Installation & Repairs",
-    text: "He was really thorough and knowledgeable. We got the answers we needed for a way better price!",
-    date: "Apr 15, 2025",
-  },
-  {
-    title: "Sealing & Caulking",
-    text: "Good attention ot detail and great communication. Came prepared and worked efficiently. Was even thoughtful enough to suggest a fix for my squeaky dryer on the way out! Thanks!",
-    date: "May 29, 2025",
-  },
-  {
-    title: "Plumbing help",
-    text: "They helped come in just 2 hours on a weekend and cleaned up my clog. Also quick response, thanks for your service",
-    date: "Jun 22, 2025",
-  },
-  {
-    title: "Plumbing help",
-    text: (
-      <>
-        He did an amazing job at installing bidet sprays and verifying no leaks
-        in both my bathrooms.
-        <br />
-        <br />
-        He's super friendly, dilligent, and organized with his own tools. He
-        quickly fixed the bidets and also helped me learn.
-        <br />
-        <br />
-        Highly recommend him for any plumbing tasks!
-      </>
-    ),
-    date: "Jul 2, 2025",
-  },
-  {
-    title: "Appliance Installation & Repairs",
-    text: "Efficient, communicative, and a great worker! Thanks so much for installing our AC!",
-    date: "Jul 13, 2025",
-  },
-  {
-    title: "Appliance Installation & Repairs",
-    text: "Cholponbek installed my window AC unit quickly and efficiently.He arrived within hours of my request on one of the hottest days of the summer. Thank you, Cholponbek!",
-    date: "Jul 16, 2025",
-  },
-  {
-    title: "Plumbing help",
-    text: "Friedly, professional, and had everything needed for the plumbing service - would highly recommend and will definitely book again when needed!",
-    date: "Jul 18, 2025",
-  },
-  {
-    title: "Plumbing help",
-    text: "Helpful and quick with diagnosing and repairing a leaky pipe under the kitchen sink!",
-    date: "Jul 20, 2025",
-  },
-  {
-    title: "Furniture Assembly",
-    text: "Bek did a great job putting together a large complicated shed and even helped level the area! He also cleaned up all the packaging after which was so nice",
-    date: "Jul 23, 2025",
-  },
-  {
-    title: "Plumbing help",
-    text: "Amazing work and I was super impressed with his flexibility in working around my work schedule and availability! Can't recommend enough.",
-    date: "Jul 28, 2025",
-  },
-  {
-    title: "Furniture Assembly",
-    text: "Professional and fast, great situation awareness. Helped set up the whole gaming center without having to specify each detail.",
-    date: "Aug 7, 2025",
-  },
-  {
-    title: "Well Repair",
-    text: "Communicative and careful",
-    date: "Aug 18, 2025",
-  },
-];
+const MEDALLION_2 = `
+<svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="1">
+  <circle cx="48" cy="48" r="44" fill="rgba(212,184,120,0.18)"></circle>
+  <circle cx="48" cy="48" r="38"></circle>
+  <circle cx="48" cy="48" r="34" opacity="0.4"></circle>
+  <path d="M48 16 L52 26 L62 27 L54 34 L56 44 L48 39 L40 44 L42 34 L34 27 L44 26 Z" fill="currentColor" opacity="0.4"></path>
+  <text x="48" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="7" font-weight="700" fill="#d4b878">PRIME UP</text>
+  <text x="48" y="60" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" font-weight="600" fill="#d4b878">MASTER</text>
+  <text x="48" y="67" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6" font-weight="600" fill="#d4b878">CRAFTSMEN</text>
+  <text x="48" y="74" text-anchor="middle" font-family="Inter, sans-serif" font-size="4" font-weight="500" fill="#d4b878">· WASHINGTON ·</text>
+  <text x="48" y="80" text-anchor="middle" font-family="Inter, sans-serif" font-size="4" font-weight="500" fill="#d4b878">STATE</text>
+</svg>`;
 
-const newTestimonials = [
-  "Great work and excellent communication. Would definitely hire again.",
-  "Came prepared, worked efficiently,and paid great attention to detail. Even suggested improvements beyond the scope.",
-  "Amazing work and very flexible with scheduling, Highly recommended.",
+const reviews = [
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+    name: "John & Debbie P., Seattle, WA",
+    text: '"The team at Prime Up put in a beautiful new Ipe deck for us. Total change from our old, rotten one. We\'re very pleased."',
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+    name: "Sarah J., Spokane, WA",
+    text: '"Just had new James Hardie siding installed. It looks perfect and was done so fast. Prime Up did a great job."',
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=200&q=80",
+    name: "The Davis's, Gig Harbor, WA",
+    text: '"Our full room addition and interior remodel exceeded expectations. Transparent pricing and good people to work with. Highly recommend."',
+  },
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials">
-      <div className="wrapper pt-[108px] pb-[32px] sm:pb-[120px]">
-        <h2 className="s-title my-[25px] text-center">
-          Trusted by Washington Homeowners
-        </h2>
-        <p className="text-[18px] sm:text-[20px] text-(--dark-blue) mb-[40px] text-center mx-auto">
-          Built on quality workmanship, clear communication, and accountability.
-        </p>
+    <section className="section">
+      <div className="wrap">
+        <div className="section-title-row">
+          <div className="line" />
+          <h2>Prime Up Stories: WA Home Transformations</h2>
+          <div className="line" />
+        </div>
 
-        <div className="scroller">
-          <div className="flex flex-wrap justify-center gap-[20px]">
-            {/* {[...testimonials,...testimonials].map((t, i) => (
+        <div className="carousel-wrap">
+          <div className="car-arrow left">‹</div>
+          <div className="car-arrow right">›</div>
+
+          <div className="testi-grid">
+            <div className="testi-hero">
               <div
-                key={i}
-                className="flex flex-col bg-[#ebedec] p-[25px_30px] basis-[300px] sm:basis-[550px] shrink-0"
-              >
-                <div className="flex gap-[10px] justify-between items-center">
-                  <span className="font-semibold text-[16px] text-[#8a9299]">
-                    {t.date}
-                  </span>
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((star: number) => (
-                      <img
-                        key={star}
-                        width={20}
-                        height={21}
-                        src={`/svg/star.svg`}
-                        alt=""
-                      />
-                    ))}
+                className="medallion m1"
+                dangerouslySetInnerHTML={{ __html: MEDALLION_1 }}
+              />
+              <div
+                className="medallion m2"
+                dangerouslySetInnerHTML={{ __html: MEDALLION_2 }}
+              />
+              <div className="testi-caption">
+                The Thompson Family Residence, Cle Elum, WA. — August 2025.
+              </div>
+            </div>
+
+            <div className="testi-list">
+              {reviews.map((r, i) => (
+                <div className="testi-card" key={i}>
+                  <div
+                    className="avatar"
+                    style={{ backgroundImage: `url('${r.avatar}')` }}
+                  />
+                  <div>
+                    <h5>{r.name}</h5>
+                    <p>{r.text}</p>
+                    <div className="stars">★ ★ ★ ★ ★</div>
                   </div>
                 </div>
-
-                <div className="mt-[24px]">
-                  <h4 className="font-bold text-[18px] leading-normal">
-                    {t.title}
-                  </h4>
-                  <p className="text-(--black) text-[16px] mt-[5px]">
-                    {t.text}
-                  </p>
-                </div>
-              </div>
-            ))} */}
-
-            {newTestimonials.map((t, i) => (
-              <div
-                className="h-fit bg-white text-center basis-[320px] shadow p-[20px] flex flex-wrap flex-col items-center"
-                key={i}
-              >
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star: number) => (
-                    <StarIcon
-                      className="text-[#e3b960]"
-                      key={star}
-                      width={25}
-                      height={26}
-                    />
-                  ))}
-                </div>
-                <p className="mt-[10px] text-[16px] sm:text-[20px] text-(--dark-blue) before:content-[url('/svg/quote-left.svg')] before:inline before:align-super after:content-[url('/svg/quote-right.svg')]">
-                  {t}
-                </p>
-
-                <span className="text-(--grey) text-[14px] mt-[12px]">
-                  - Homeowner, WA
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        </div>
+
+        <div
+          className="center-cta"
+          style={{ justifyContent: "flex-end", marginTop: 28 }}
+        >
+          <a href="#portfolio" className="btn-bracket-filled">
+            [ EXPLORE THE PORTFOLIO ]
+          </a>
         </div>
       </div>
     </section>

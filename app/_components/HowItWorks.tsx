@@ -1,104 +1,60 @@
-import Image from "next/image";
-import React from "react";
-
-const data = [
+const steps = [
   {
-    title: (
-      <>
-        Free <br /> Estimate
-      </>
-    ),
-    text: "On-site evaluation and project discussion.",
+    title: "Free Estimate",
+    text: "On-site evaluation and a clear discussion of your project.",
   },
   {
-    title: (
-      <>
-        Clear Scope <br />& Pricing
-      </>
-    ),
-    text: "Defined scope, materials, and transparent pricing.",
+    title: "Clear Scope & Pricing",
+    text: "Defined scope, materials and transparent, itemized pricing.",
   },
   {
-    title: (
-      <>
-        Sheduled <br /> start date
-      </>
-    ),
-    text: "Agreed timeline and start date.",
+    title: "Scheduled Start Date",
+    text: "An agreed timeline and a firm start date you can plan around.",
   },
   {
-    title: (
-      <>
-        Professional <br /> Execution
-      </>
-    ),
-    text: "Licensed, code-compliant work performed.",
+    title: "Professional Execution",
+    text: "Licensed, code-compliant work performed with care.",
   },
   {
-    title: (
-      <>
-        Final
-        <br /> Walkthrough
-      </>
-    ),
-    text: "Review, comletion, and close-out.",
+    title: "Final Walkthrough",
+    text: "A shared review, completion and clean close-out.",
   },
 ];
 
 export const HowItWorks = () => {
   return (
-    <div className="wrapper py-[50px]">
-      <h2 className="s-title text-center mb-[30px]">How It Works</h2>
-
-      <div className="bg-white shadow-xl rounded-[10px] p-[40px] max-w-[1040px] max-w-full">
-        <div className="flex justify-center max-sm:flex-col items-center flex-wrap gap-[10px]">
-          {data.map((d, i) => (
-            <React.Fragment key={i}>
-              <div
-                key={i}
-                className="flex-[1_1_200px] flex flex-col items-center"
-              >
-                <div className="relative text-white bg-(--blue) rounded-full py-[10px] px-[20px] font-bold text-[20px]">
-                  {i + 1}
-
-                  {i !== data.length - 1 && (
-                    <Image
-                      className="max-sm:hidden absolute right-[-180%] top-1/2 -translate-y-1/2 "
-                      width={80}
-                      height={50}
-                      src="/svg/arrow-long.svg"
-                      alt=""
-                    />
-                  )}
-                </div>
-                <h3 className="text-[20px] text-(--dark-blue) font-bold my-[10px] text-center leading-[24px]">
-                  {d.title}
-                </h3>
-
-                <p className="text-center text-[16px]">{d.text}</p>
-              </div>
-
-              {i !== data.length - 1 && (
-                <Image
-                  className="sm:hidden rotate-90"
-                  width={80}
-                  height={50}
-                  src="/svg/arrow-long.svg"
-                  alt=""
-                />
-              )}
-            </React.Fragment>
-          ))}
+    <section id="process" className="section">
+      <div className="wrapper">
+        <div className="text-center max-w-[620px] mx-auto">
+          <span className="eyebrow">How it works</span>
+          <h2 className="s-title mt-[14px]">A simple, transparent process</h2>
+          <p className="s-text mt-[16px]">
+            Five clear steps from first call to finished project — so you always
+            know exactly what happens next.
+          </p>
         </div>
-        <hr
-          className="
-  border-none 
-  h-[2px] 
-  mt-10 
-  bg-[linear-gradient(90deg,transparent,var(--grey-800)_20%,var(--grey-800)_80%,transparent)]
-"
-        />
+
+        <div className="relative mt-[56px]">
+          {/* connecting line */}
+          <div className="hidden lg:block absolute top-[26px] left-[10%] right-[10%] h-[2px] bg-[var(--line)]" />
+
+          <ol className="grid gap-[36px] sm:grid-cols-2 lg:grid-cols-5">
+            {steps.map((s, i) => (
+              <li key={i} className="relative flex flex-col items-center text-center">
+                <div className="relative z-10 w-[54px] h-[54px] rounded-full bg-[var(--blue-strong)] text-white grid place-items-center text-[22px] font-extrabold shadow-[0_12px_24px_-10px_rgba(47,111,179,0.8)] ring-8 ring-[var(--bg)]">
+                  {i + 1}
+                </div>
+                <h3 className="mt-[18px] text-[18px] font-extrabold text-[var(--dark-blue)] leading-tight">
+                  {s.title}
+                </h3>
+                <p className="mt-[8px] text-[15px] text-[var(--grey-2)] leading-[1.55] max-w-[210px]">
+                  {s.text}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

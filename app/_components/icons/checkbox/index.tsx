@@ -12,9 +12,9 @@ export const CheckboxIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
     <path
       d="M20.5 6L9.5 17L4.5 12"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
