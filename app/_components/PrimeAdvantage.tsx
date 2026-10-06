@@ -1,3 +1,4 @@
+import { EstimateButton } from "./EstimateModal";
 const ICON_BLUEPRINT = `
 <svg viewBox="0 0 160 160" fill="none" stroke="currentColor" stroke-width="1.5">
   <rect x="18" y="42" width="118" height="88" rx="2" opacity="0.9"></rect>
@@ -100,9 +101,9 @@ export const PrimeAdvantage = () => {
         </div>
 
         <div className="center-cta">
-          <a href="#contact" className="btn-bracket-filled">
-            [ REQUEST A PERSONALIZED CONSULTATION ]
-          </a>
+          <EstimateButton className="btn-bracket-filled">
+            REQUEST A PERSONALIZED CONSULTATION
+          </EstimateButton>
         </div>
       </div>
     </section>

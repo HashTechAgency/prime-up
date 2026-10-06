@@ -9,13 +9,10 @@ export const Gallery = () => {
         </div>
 
         <div className="carousel-wrap">
-          <div className="car-arrow left">‹</div>
-          <div className="car-arrow right">›</div>
-
           <div className="portfolio">
             <div
               className="tile big"
-              style={{ backgroundImage: "url('/img/gallery-3.jpg')" }}
+              style={{ backgroundImage: "url('/img/project-1.jpg')" }}
             >
               <span className="tag tl">Seattle, WA</span>
               <span className="tag bl">Seattle, WA</span>
@@ -28,19 +25,19 @@ export const Gallery = () => {
             </div>
             <div
               className="tile"
-              style={{ backgroundImage: "url('/img/gallery-4.jpg')" }}
+              style={{ backgroundImage: "url('/img/project-2.jpg')" }}
             >
               <span className="tag">Bellevue, WA</span>
             </div>
             <div
               className="tile"
-              style={{ backgroundImage: "url('/img/gallery-5.jpg')" }}
+              style={{ backgroundImage: "url('/img/project-3.jpg')" }}
             >
               <span className="tag">Tacoma, WA</span>
             </div>
             <div
               className="tile"
-              style={{ backgroundImage: "url('/img/gallery-1.jpg')" }}
+              style={{ backgroundImage: "url('/img/project-4.jpg')" }}
             >
               <span className="tag">Bellevue, WA</span>
             </div>
@@ -49,7 +46,7 @@ export const Gallery = () => {
 
         <div className="center-cta">
           <a href="#portfolio" className="btn-bracket-filled">
-            [ EXPLORE THE PORTFOLIO ]
+            EXPLORE THE PORTFOLIO
           </a>
         </div>
       </div>

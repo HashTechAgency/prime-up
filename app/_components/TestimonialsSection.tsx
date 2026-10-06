@@ -55,9 +55,6 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="carousel-wrap">
-          <div className="car-arrow left">‹</div>
-          <div className="car-arrow right">›</div>
-
           <div className="testi-grid">
             <div className="testi-hero">
               <div
@@ -96,7 +93,7 @@ const TestimonialsSection = () => {
           style={{ justifyContent: "flex-end", marginTop: 28 }}
         >
           <a href="#portfolio" className="btn-bracket-filled">
-            [ EXPLORE THE PORTFOLIO ]
+            EXPLORE THE PORTFOLIO
           </a>
         </div>
       </div>

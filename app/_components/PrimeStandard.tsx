@@ -31,27 +31,33 @@ const ICON_RULER = `
   </g>
 </svg>`;
 
-const ICON_MILWAUKEE = `
-<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter" stroke-linecap="square">
-  <path d="M8 54 L8 14 L22 14 L32 34 L42 14 L56 14 L56 54 L46 54 L46 28 L36 48 L28 48 L18 28 L18 54 Z"></path>
-  <path d="M38 14 L24 38 L32 38 L26 54" stroke-width="1.8" stroke-linejoin="miter"></path>
+const ICON_PERMIT = `
+<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="14" y="10" width="36" height="46" rx="2"></rect>
+  <rect x="24" y="6" width="16" height="8" rx="1.5"></rect>
+  <path d="M22 26 L32 19 L42 26"></path>
+  <path d="M25 24 L25 34 L39 34 L39 24"></path>
+  <line x1="21" y1="41" x2="35" y2="41"></line>
+  <line x1="21" y1="47" x2="31" y2="47"></line>
+  <circle cx="43" cy="47" r="6"></circle>
+  <path d="M40.5 47 L42.5 49 L46 45" stroke-width="1.6"></path>
 </svg>`;
 
 const items = [
   {
     icon: ICON_AWARD,
-    title: "Licensed & Bonded (WA)",
+    title: "Licensed, Bonded & Insured",
     lines: ["Full compliance."],
   },
   {
     icon: ICON_RULER,
-    title: "Itemized Quotes",
-    lines: ["No hidden fees.", "Transparent, detailed estimates."],
+    title: "Detailed Estimates",
+    lines: ["Clear scope, transparent pricing,", "no hidden fees."],
   },
   {
-    icon: ICON_MILWAUKEE,
-    title: "Milwaukee Precision",
-    lines: ["(Utilizing top-tier tools", "for every cut.)"],
+    icon: ICON_PERMIT,
+    title: "Permits & Code Compliance",
+    lines: ["Projects completed to", "Washington building standards."],
   },
 ];
 

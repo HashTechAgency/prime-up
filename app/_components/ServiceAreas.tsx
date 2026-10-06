@@ -30,7 +30,7 @@ export const ServiceAreas = () => {
           style={{ justifyContent: "flex-end", marginTop: 28 }}
         >
           <a href="#portfolio" className="btn-bracket-filled">
-            [ EXPLORE THE PORTFOLIO ]
+            EXPLORE THE PORTFOLIO
           </a>
         </div>
       </div>

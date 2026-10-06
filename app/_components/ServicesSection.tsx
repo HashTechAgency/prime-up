@@ -1,18 +1,18 @@
 const services = [
   {
-    img: "/img/gallery-1.jpg",
+    img: "/img/custom-decks.jpg",
     title: ["Custom", "Decks"],
     text: "Outdoor living spaces designed for the Pacific Northwest.",
   },
   {
-    img: "/img/gallery-2.jpg",
+    img: "/img/premium-siding.jpg",
     title: ["Premium", "Siding"],
     text: "High-performance protection with James Hardie & LP SmartSide.",
   },
   {
-    img: "/img/exterior-remodeling.jpg",
-    title: ["Exterior", "Remodeling"],
-    text: "Structural upgrades and high-end exterior transformations.",
+    img: "/img/remodelling.jpg",
+    title: ["Remodelling"],
+    text: "Kitchen, bathroom and whole-home remodelling.",
   },
 ];
 
@@ -27,10 +27,6 @@ export const ServicesSection = () => {
         </div>
 
         <div className="services-carousel">
-          <button className="services-arrow left" aria-label="Previous">
-            ‹
-          </button>
-
           <div className="services">
             {services.map((s, i) => (
               <article
@@ -49,10 +45,6 @@ export const ServicesSection = () => {
               </article>
             ))}
           </div>
-
-          <button className="services-arrow right" aria-label="Next">
-            ›
-          </button>
         </div>
 
         <div className="trust-line">
