@@ -102,7 +102,7 @@ export const PrimeAdvantage = () => {
 
         <div className="center-cta">
           <EstimateButton className="btn-bracket-filled">
-            REQUEST A PERSONALIZED CONSULTATION
+            REQUEST A FREE CONSULTATION
           </EstimateButton>
         </div>
       </div>

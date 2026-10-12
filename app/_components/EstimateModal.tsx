@@ -14,6 +14,12 @@ const projectTypes = [
   "Other",
 ];
 
+const reportConversion = () => {
+  if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+    (window as any).gtag_report_conversion();
+  }
+};
+
 const emptyForm = { name: "", email: "", phone: "", type: "", website: "" };
 
 export const EstimateModal = ({
@@ -48,12 +54,7 @@ export const EstimateModal = ({
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
-      if (
-        typeof window !== "undefined" &&
-        (window as any).gtag_report_conversion
-      ) {
-        (window as any).gtag_report_conversion();
-      }
+      reportConversion();
       setForm(emptyForm);
       setStatus("sent");
     } catch {
@@ -71,7 +72,7 @@ export const EstimateModal = ({
           </h2>
           <p className="estimate-note">
             We&apos;ll get back to you shortly. Need us sooner? Call{" "}
-            <a href={PHONE_HREF}>{PHONE_LABEL}</a>.
+            <a href={PHONE_HREF} onClick={reportConversion}>{PHONE_LABEL}</a>.
           </p>
           <button
             type="button"
@@ -142,7 +143,7 @@ export const EstimateModal = ({
             {status === "error" && (
               <p className="estimate-note error" role="alert">
                 Something went wrong. Please try again or call{" "}
-                <a href={PHONE_HREF}>{PHONE_LABEL}</a>.
+                <a href={PHONE_HREF} onClick={reportConversion}>{PHONE_LABEL}</a>.
               </p>
             )}
             <button

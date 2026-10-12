@@ -13,34 +13,23 @@ export const Gallery = () => {
             <div
               className="tile big"
               style={{ backgroundImage: "url('/img/project-1.jpg')" }}
-            >
-              <span className="tag tl">Seattle, WA</span>
-              <span className="tag bl">Seattle, WA</span>
-            </div>
+            />
             <div
               className="tile"
               style={{ backgroundImage: "url('/img/gallery-2.jpg')" }}
-            >
-              <span className="tag">Seattle, WA</span>
-            </div>
+            />
             <div
               className="tile"
               style={{ backgroundImage: "url('/img/project-2.jpg')" }}
-            >
-              <span className="tag">Bellevue, WA</span>
-            </div>
+            />
             <div
               className="tile"
               style={{ backgroundImage: "url('/img/project-3.jpg')" }}
-            >
-              <span className="tag">Tacoma, WA</span>
-            </div>
+            />
             <div
               className="tile"
               style={{ backgroundImage: "url('/img/project-4.jpg')" }}
-            >
-              <span className="tag">Bellevue, WA</span>
-            </div>
+            />
           </div>
         </div>
 

@@ -1,17 +1,21 @@
 import Script from "next/script";
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+// Google Ads conversion tag (shared by llcprimeup@gmail.com). Always loaded so
+// conversion tracking doesn't depend on the GA env var.
+const ADS_ID = "AW-17619898459";
 const GTM_ID = "GTM-PFC9GNDT";
 
 export function GoogleTag() {
-  if (!GA_MEASUREMENT_ID) {
-    return null;
-  }
+  const extraConfig =
+    GA_MEASUREMENT_ID && GA_MEASUREMENT_ID !== ADS_ID
+      ? `gtag('config', '${GA_MEASUREMENT_ID}');`
+      : "";
 
   return (
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${ADS_ID}`}
       />
       <Script
         id="google-analytics"
@@ -21,7 +25,8 @@ export function GoogleTag() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${ADS_ID}');
+            ${extraConfig}
           `,
         }}
       />

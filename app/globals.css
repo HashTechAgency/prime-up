@@ -639,19 +639,6 @@ body {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 55%, rgba(5,18,42,0.85) 100%);
 }
-.tile .tag {
-  position: absolute;
-  bottom: 14px; right: 14px;
-  z-index: 2;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  color: var(--gold-300);
-  text-transform: uppercase;
-}
-.tile .tag.tl { top: 14px; left: auto; right: 14px; bottom: auto; }
-.tile .tag.bl { bottom: 14px; left: 14px; right: auto; }
-
 /* ─── Service Area (map section) ───────────────────────────── */
 .map-block {
   border: 1px solid rgba(212, 184, 120, 0.18);
